@@ -91,7 +91,7 @@ class Predict(Resource):
         X = pd.DataFrame(data=X)
 
         revenue = pred(X)
-        args["proba"], args["revenue"] = int(revenue[2]),float(revenue[7:11])
+        args["revenue"], args["proba"] = int(revenue[2]),float(revenue[7:11])
         save_data(args)
         return revenue
 

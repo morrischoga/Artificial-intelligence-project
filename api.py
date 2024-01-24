@@ -11,9 +11,6 @@ headers = {
 
 def save_data(args):
     id = uuid.uuid4()
-
-
-    # payload = {'records':[{'fields': {f'query_id': {id}, 'client_id': 123, 'month': 'xx', 'proba': args['proba'], 'revenue': args['revenue']}}]}
     payload = {
     'records': [
         {
