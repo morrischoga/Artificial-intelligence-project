@@ -86,6 +86,7 @@ class Predict(Resource):
             if month:
                 x = list(args)
                 args["month"]=x[count]
+
             count+=1
 
         X = pd.DataFrame(data=X)

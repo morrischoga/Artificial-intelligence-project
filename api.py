@@ -28,7 +28,6 @@ def save_data(args):
     response = requests.post(url, headers=headers, json=json.loads(payload))
     if response.status_code == 200:
         print('API call successful!')
-        print(response.json())
     else:
         print(f'Error: {response.status_code} - {response.text}')
 
