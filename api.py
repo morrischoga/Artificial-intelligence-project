@@ -18,7 +18,7 @@ def save_data(args):
                 'query_id': str(id),
                 'client_id': 123,
                 'month': args["month"],
-                'proba': args['proba'],
+                'proba': float(args['proba']),
                 'revenue': int(args['revenue'])
             }
         }
