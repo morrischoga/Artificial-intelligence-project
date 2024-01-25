@@ -19,7 +19,7 @@ def save_data(args):
                 'client_id': 123,
                 'month': args["month"],
                 'proba': args['proba'],
-                'revenue': args['revenue']
+                'revenue': int(args['revenue'])
             }
         }
     ]

@@ -91,7 +91,8 @@ class Predict(Resource):
         X = pd.DataFrame(data=X)
 
         revenue = pred(X)
-        args["revenue"], args["proba"] = int(revenue[2]),float(revenue[7:11])
+
+        args["revenue"], args["proba"] = revenue["revenue"], revenue["proba"]
         save_data(args)
         return revenue
 
@@ -101,7 +102,8 @@ class Predict(Resource):
         args = api_args.parse_args()
         body = request.get_json()
         predictions = self.predict(body)
-        return predictions
+        # return predictions
+        return f"Revenue is {predictions['revenue']} and Proba: {predictions['proba']}"
 
 
 api.add_resource(Predict, "/api")

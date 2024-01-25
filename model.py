@@ -17,4 +17,5 @@ def pred(x):
     proba = model.predict_proba(x)
     proba = "{:.2f}".format(np.max(proba))
     prediction = model.predict(x)
-    return json.dumps({str(prediction[0]):proba})
+    return {"revenue":prediction[0], "proba":proba}
+    # return json.dumps({str(prediction[0]):proba})
